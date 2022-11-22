@@ -25,6 +25,10 @@ const customViewports = Object.fromEntries(
   })
 );
 
+export const globalTypes = {
+  darkMode: true,
+};
+
 // Allow Storybook to handle Next's <Image> component
 const OriginalNextImage = NextImage.default;
 
@@ -34,7 +38,21 @@ Object.defineProperty(NextImage, 'default', {
 });
 
 export const parameters = {
+  backgrounds: {
+    default: 'dark',
+    values: [
+      {
+        name: 'dark',
+        value: '#1C1B1F',
+      },
+      {
+        name: 'light',
+        value: '#FFFBFE',
+      },
+    ],
+  },
   actions: { argTypesRegex: '^on[A-Z].*' },
+
   controls: {
     matchers: {
       color: /(background|color)$/i,
