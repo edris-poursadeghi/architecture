@@ -7,7 +7,7 @@ class SpecialDocument extends Document {
     return (
       <Html>
         <Head />
-        <body className="bg-white text-black dark:bg-black dark:text-white">
+        <body className="bg-white text-black dark:bg-neutral-10 dark:text-while ">
           <Main />
           <NextScript />
         </body>
