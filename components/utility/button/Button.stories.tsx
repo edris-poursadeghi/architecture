@@ -12,9 +12,27 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Base = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
+export const Primary = Template.bind({});
+Primary.args = {
+  ...mockButtonProps.primary,
+} as IButton;
 
-Base.args = {
-  ...mockButtonProps.base,
+export const Danger = Template.bind({});
+Danger.args = {
+  ...mockButtonProps.danger,
+} as IButton;
+
+export const Warning = Template.bind({});
+Warning.args = {
+  ...mockButtonProps.warning,
+} as IButton;
+
+export const Success = Template.bind({});
+Success.args = {
+  ...mockButtonProps.success,
+} as IButton;
+
+export const Blue = Template.bind({});
+Blue.args = {
+  ...mockButtonProps.blue,
 } as IButton;
